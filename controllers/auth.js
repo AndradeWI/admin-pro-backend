@@ -80,7 +80,7 @@ const googleSignIn = async( req, res = response ) => {
        await usuario.save();
 
        // Gerar o TOKEN - JWT
-       const token = await gerarJWT( usuarioBD.id );
+       const token = await gerarJWT( usuario.id );
         
         res.json({
             ok: true,
